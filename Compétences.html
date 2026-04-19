@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin VINCENT - Compétences</title>
+    <link rel="stylesheet" href="code blog.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container hero">
+      <div class="hero-content">
+        <h1>Martin VINCENT</h1>
+        <p>Étudiant en BTS SIO</p>
+        
+        <nav class="main-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="Blog.html#about">À Propos</a></li>
+            <li><a href="Compétences.html#skills">Compétences</a></li>
+            <li><a href="Projets.html" class=".btn">Projets</a></li>
+            <li><a href="Blog.html#contact">Contact</a></li>
+            <li><a href="Veille technologique.html">Veille Technologique</a></li>
+            <li><a href = "CV Martin VINCENT.pdf">Télécharger mon CV</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="skills" class="section">
+      <button id="show-skills">Compétences</button>
+      <h2>Compétences</h2>
+      <ul class="skills-list" style="display:none;">
+        <li>Mettre en place et vérifier les niveaux d’habilitation associés à un service, Gérer des sauvegardes</li>
+        <li>Analyser les objectifs et les modalités d’organisation d’un projet, Planifier les activités</li>
+        <li>Réaliser les tests d’intégration et d’acceptation d’un service</li>
+        <li>Mettre en place son environnement d’apprentissage personnel</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    function showSkills() {
+      var skills = document.querySelector('.skills-list');
+      if (skills) {
+        skills.style.display = 'block';
+      }
+    }
+
+    document.getElementById('show-skills').addEventListener('click', function(event) {
+      event.preventDefault();
+      showSkills();
+    });
+
+    if (window.location.hash === '#skills') {
+      showSkills();
+    }
+  </script>
+</body>
+</html>
