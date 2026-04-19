@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin VINCENT - Compétences</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container hero">
+      <div class="hero-content">
+        <h1>Martin VINCENT</h1>
+        <p>Étudiant en BTS SIO</p>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="index.html#about">À Propos</a></li>
+            <li><a href="competences.html#skills">Compétences</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="veille.html">Veille Technologique</a></li>
+            <li><a href="CV Martin VINCENT.pdf">Télécharger mon CV</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="skills" class="section">
+      <h2>Compétences</h2>
+      <button id="show-skills" class="btn">Afficher les compétences</button>
+      <ul class="skills-list" style="display:none; margin-top: 20px;">
+        <li>Mettre en place et vérifier les niveaux d'habilitation associés à un service, Gérer des sauvegardes</li>
+        <li>Analyser les objectifs et les modalités d'organisation d'un projet, Planifier les activités</li>
+        <li>Réaliser les tests d'intégration et d'acceptation d'un service</li>
+        <li>Mettre en place son environnement d'apprentissage personnel</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025-2027 - Martin Vincent | Blog</p>
+    </div>
+  </footer>
+
+  <script>
+    function showSkills() {
+      var skills = document.querySelector('.skills-list');
+      if (skills) skills.style.display = 'block';
+    }
+    document.getElementById('show-skills').addEventListener('click', function(e) {
+      e.preventDefault();
+      showSkills();
+    });
+    if (window.location.hash === '#skills') showSkills();
+  </script>
+</body>
+</html>
